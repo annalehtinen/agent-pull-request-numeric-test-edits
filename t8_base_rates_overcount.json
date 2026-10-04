@@ -1,0 +1,90 @@
+{
+ "generated_by": "data/make_t8_base_rates.py",
+ "inputs": [
+  "t5a_detect.json",
+  "t5_f12b_feasibility.json",
+  "t4c_adapted_labels.json",
+  "t4_f12b_killcheck.json"
+ ],
+ "base_rates": {
+  "agent_prs_in_table": 7391,
+  "human_prs_in_table": 41651,
+  "human_prs_in_table_derivation": "prs_in_table 49042 minus agent_prs_in_table 7391 (t5a_detect.json)",
+  "agent_prs_flagged": 151,
+  "human_prs_flagged": 1067,
+  "agent_share_flagged": 0.0204,
+  "human_share_flagged": 0.0256,
+  "agents_in_table": [
+   "Agent A",
+   "Agent B",
+   "Agent C",
+   "Agent D"
+  ],
+  "agent_share_flagged_by_agent": {
+   "Agent A": {
+    "flagged": 74,
+    "in_table": 3587,
+    "share": 0.0206
+   },
+   "Agent B": {
+    "flagged": 54,
+    "in_table": 2016,
+    "share": 0.0268
+   },
+   "Agent C": {
+    "flagged": 14,
+    "in_table": 1094,
+    "share": 0.0128
+   },
+   "Agent D": {
+    "flagged": 9,
+    "in_table": 694,
+    "share": 0.013
+   }
+  },
+  "precision_sample_flagged_hunks": {
+   "agent": {
+    "n": 24,
+    "tp": 22
+   },
+   "human": {
+    "n": 24,
+    "tp": 20
+   }
+  },
+  "hunks_toladd": 0,
+  "hunks_with_changes": 456054,
+  "reading": "shares of PRs with at least one flagged hunk; not rates of numeric oracle edits and not an agent-versus-human comparison (no adjustment for repository, PR size or hunk count; no test)"
+ },
+ "adapted_overcount": {
+  "population": "agent PRs of the public test-patch table",
+  "adapted_true_agent_prs": 3279,
+  "adapted_false_agent_prs": 4112,
+  "negative_sampling_stratum_size": null,
+  "negative_sampling_stratum_note": "adapted false AND a test file modified: size not recorded; bounded above by adapted_false_agent_prs",
+  "positives": {
+   "k": 5,
+   "n": 20,
+   "ppv": 0.25,
+   "wilson95": [
+    0.1119,
+    0.4687
+   ]
+  },
+  "negatives": {
+   "k": 0,
+   "n": 20,
+   "rate": 0.0,
+   "wilson95": [
+    0.0,
+    0.1611
+   ]
+  },
+  "overcount_point_positives_only": 4.0,
+  "overcount_upper": 8.94,
+  "overcount_lower": 1.49,
+  "overcount_lower_positives_only": 2.13,
+  "definition": "adapted_true_agent_prs / (ppv * adapted_true_agent_prs + negative_rate * negative_stratum); upper: ppv at its Wilson lower bound and negative rate 0; lower: ppv at its Wilson upper bound, negative rate at its Wilson upper bound and the negative stratum at its upper bound",
+  "reading": "both bounds exceed 1, so the column overcounts edits of existing expected values or tolerances among agent PRs within these single-rater samples; the bounds combine two separate 95 percent intervals at their extremes and are not a joint confidence interval"
+ }
+}

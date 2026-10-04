@@ -1,0 +1,15 @@
+{
+ "files_checked": 334,
+ "api_key_values_found_in": [],
+ "person_keys": {},
+ "email_like_strings_in_derived_outputs": {},
+ "E_parquet_person_columns": {},
+ "E_parquet_files": [
+  "fix_classified_prs_noperson.parquet",
+  "hunks_f12b.parquet",
+  "hunks_f12b_v2.parquet",
+  "pr_test_patches.parquet",
+  "pr_test_quality.parquet",
+  "pr_test_quality_missing.parquet"
+ ]
+}

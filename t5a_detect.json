@@ -1,0 +1,111 @@
+{
+ "detector": "oracle_edit_detector.py v2",
+ "patch_rows": 222208,
+ "prs_in_table": 49042,
+ "repos_in_table": 173,
+ "agent_prs_in_table": 7391,
+ "hunks_with_changes": 456054,
+ "hunks_flagged": 2626,
+ "hunks_numedit": 2626,
+ "hunks_toladd": 0,
+ "prs_flagged": 1218,
+ "agent_prs_flagged": 151,
+ "agent_prs_flagged_merged": 120,
+ "human_prs_flagged": 1067,
+ "sci_repos_in_table": [
+  "JuliaLang/julia",
+  "JuliaSymbolics/Symbolics.jl",
+  "SciML/DiffEqGPU.jl",
+  "acts-project/acts",
+  "tier4/scenario_simulator_v2"
+ ],
+ "sci_prs_in_table": 439,
+ "sci_agent_prs_in_table": 47,
+ "sci_agent_prs_flagged": 1,
+ "sci_agent_prs_flagged_merged": 1,
+ "sci_human_prs_flagged": 16,
+ "energy17_in_table": [],
+ "energy17_prs_in_table": 0,
+ "agent_labels_note": "the four studied agents are labelled Agent A to Agent D in descending pull-request count in the table; the cited source revision labels them by product name",
+ "agent_prs_by_agent_flagged": {
+  "Agent C": 14,
+  "Agent D": 9,
+  "Agent A": 74,
+  "Agent B": 54
+ },
+ "agent_prs_by_agent_in_table": {
+  "Agent B": 2016,
+  "Agent A": 3587,
+  "Agent C": 1094,
+  "Agent D": 694
+ },
+ "sci_agent_prs_flagged_by_repo": {
+  "SciML/DiffEqGPU.jl": 1
+ },
+ "sci_human_prs_flagged_by_repo": {
+  "SciML/DiffEqGPU.jl": 3,
+  "JuliaSymbolics/Symbolics.jl": 2,
+  "acts-project/acts": 2,
+  "JuliaLang/julia": 8,
+  "tier4/scenario_simulator_v2": 1
+ },
+ "sci_agent_prs_by_repo": {
+  "SciML/DiffEqGPU.jl": 8,
+  "tier4/scenario_simulator_v2": 5,
+  "acts-project/acts": 21,
+  "JuliaSymbolics/Symbolics.jl": 6,
+  "JuliaLang/julia": 7
+ },
+ "flagged_hunks_in_data_like_files": 3,
+ "adapted_vs_detector": {
+  "adapted=True|detector_flag=False": 22720,
+  "adapted=False|detector_flag=True": 233,
+  "adapted=False|detector_flag=False": 25104,
+  "adapted=True|detector_flag=True": 985
+ },
+ "adapted_vs_oraclemod": {
+  "adapted=True|oraclemod=True": 8978,
+  "adapted=False|oraclemod=False": 22840,
+  "adapted=False|oraclemod=True": 2497,
+  "adapted=True|oraclemod=False": 14727
+ },
+ "adapted_vs_detector_agent": {
+  "adapted=False|detector_flag=False": 4083,
+  "adapted=True|detector_flag=True": 122,
+  "adapted=False|detector_flag=True": 29,
+  "adapted=True|detector_flag=False": 3157
+ },
+ "adapted_true_agent_prs": 3279,
+ "adapted_true_sci_agent_prs": 29,
+ "quality_table_prs": 49042,
+ "quality_table_distinct_pr_keys": 49042,
+ "run_at": "2026-09-28T10:09:33Z",
+ "seconds": 821.3,
+ "stratum_sizes": {
+  "F|agent=True|python": 44,
+  "F|agent=True|js_ts": 145,
+  "F|agent=True|jvm_net": 43,
+  "F|agent=True|other": 21,
+  "F|agent=False|python": 621,
+  "F|agent=False|js_ts": 926,
+  "F|agent=False|jvm_net": 413,
+  "F|agent=False|other": 324,
+  "U1_oraclemod_not_flagged": 50152,
+  "U2_numchg_nonoracle": 6849,
+  "U3_other_unflagged_mixed": 210737,
+  "F_all": 2626,
+  "U_all": 453428,
+  "U_pure_add_or_remove": 185640,
+  "U3_other_unflagged_mixed_full": 210746,
+  "U1_oraclemod_not_flagged_full": 50181,
+  "U2_numchg_nonoracle_full": 6861,
+  "F|agent=True|python_full": 50,
+  "F|agent=True|js_ts_full": 150,
+  "F|agent=True|jvm_net_full": 48,
+  "F|agent=True|other_full": 26,
+  "F|agent=False|python_full": 627,
+  "F|agent=False|js_ts_full": 930,
+  "F|agent=False|jvm_net_full": 419,
+  "F|agent=False|other_full": 376
+ }
+}

@@ -1,0 +1,471 @@
+{
+ "run_at": "2026-09-28T09:15:17Z",
+ "entries": [
+  {
+   "id": "hf:mabujadallah/GitHub-Agentic-PR-Dataset#pr_test_quality.adapted",
+   "what": "GitHub Agentic PR Dataset (Abujadallah and Sayagh, ETS Montreal; CC-BY-4.0), table pr_test_quality, column `adapted`",
+   "read": "released parquet file (revision 8a44bdb6, downloaded to E: by t5a_ingest.py) and dataset card; tables added in commits of 2026-07-21 ('Add RQ2 test-quality and RQ3 review-depth tables'), documented 2026-09-27",
+   "definition_verbatim": "adapted | bool | The fix edits an existing test's expected values rather than adding a new test.",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": true
+   },
+   "needs_validity_check": true,
+   "reason": "one row per PR (49,042 rows, 49,042 distinct repo_name+number keys) with is_agent; the stated definition is an edit of an existing test's expected values, i.e. oracle modification; operationalisation undocumented (the authors' arXiv 2606.13468 is the rejection study and does not define it), so criterion 5 (hand-check) decides",
+   "evidence_files": [
+    "t5a_ingest.json",
+    "t5a_detect.json",
+    "t4c_adapted_sample.json",
+    "t4c_adapted_labels.json",
+    "captures/priorart/fe26d0cbb2fbc22d7ec76d02.json"
+   ]
+  },
+  {
+   "id": "arXiv:2607.18057",
+   "what": "Test Coverage Analysis of Agentic Pull Requests (Dipongkor, Baral, Lam, Moran; ICSME 2026), package SageSELab/Agentic-Pull-Request-Test-Coverage",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "PR label 'Modifies Tests' = changes test files without introducing a new test method (declared-name set unchanged); structural, says nothing about expected values or tolerances; 1,500 of 4,882 PRs"
+  },
+  {
+   "id": "arXiv:2601.21194",
+   "what": "Human-Agent versus Human Pull Requests: A Testing-Focused Characterization (Milanese et al., MSR 2026), Zenodo package",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "test-evolution task labels Add/Mod/Del on a stratified sample of 339 agent PRs (Pinto et al. taxonomy) plus test-smell deltas; 'Mod' is any modification of existing test code, not an expected-value or tolerance edit"
+  },
+  {
+   "id": "arXiv:2606.18168",
+   "what": "All Smoke, No Alarm: Oracle Signals in Agent-Authored Test Code (Banik, Chowdhury, Shamim), figshare 10.6084/m9.figshare.32032107",
+   "read": "full text (arXiv HTML) and figshare file list",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "oracle-signal category (W1-W5, S1-S3) of the ADDED lines of each test patch; strength of assertions present, not edits to existing expected values; the paper itself notes modified-file patches are classified on added lines only"
+  },
+  {
+   "id": "arXiv:2601.03556",
+   "what": "An Empirical Study of Tests in Agentic Pull Requests (Haque, Ingale, Csallner; MSR 2026), figshare package",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "test inclusion, timing, size and merge outcome of test-containing PRs; no edit-of-existing-oracle label"
+  },
+  {
+   "id": "arXiv:2607.12068",
+   "what": "Beyond Test Presence: Assessing the Quality and Robustness of Agent-Generated Tests (IEEE 2026), Zenodo 20344789",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": false,
+    "construct": false
+   },
+   "reason": "assertion strength, edge-case variety and flakiness of 204,673 test files; file-level quality scores, not an edit label"
+  },
+  {
+   "id": "doi:10.1145/3793302.3793618",
+   "what": "Test Coverage of Code Changes in AI-Generated Pull Requests (MSR 2026)",
+   "read": "abstract (OpenAlex) and Scholar snippet; ACM full text returned HTTP 403",
+   "criteria": {
+    "released": null,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "coverage of changed code by the PR's tests and presence of meaningful assertions; 'test-modification filter' selects PRs that touch tests, it is not an oracle-edit label (abstract-level read; recorded as a channel limit)"
+  },
+  {
+   "id": "arXiv:2609.26847",
+   "what": "Who Finishes the Job? (killed F12 under decision 3)",
+   "read": "released files (previous build t2_killcheck.json)",
+   "criteria": {
+    "released": true,
+    "agent_prs": true,
+    "pr_level": true,
+    "construct": false
+   },
+   "reason": "post-merge follow-up-fix label; not an edit of test expected values by the agent PR"
+  },
+  {
+   "id": "arXiv:2510.20270",
+   "what": "ImpossibleBench",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": true
+   },
+   "reason": "labels agent TRAJECTORIES on mutated benchmark tasks (one-off expected-value mutations) that modify tests; benchmark runs, not pull requests in real repositories"
+  },
+  {
+   "id": "arXiv:2511.21654",
+   "what": "EvilGenie: A Reward Hacking Benchmark",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": true
+   },
+   "reason": "test-file edit detection on LiveCodeBench problems in a sandbox; not PRs"
+  },
+  {
+   "id": "arXiv:2605.01471",
+   "what": "Practical Limits of Autonomous Test Repair (industrial case study)",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": false,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": true
+   },
+   "reason": "documents assertion weakening (toBe -> toBeTruthy) inside one company's multi-agent UI-test system; no released PR-level label"
+  },
+  {
+   "id": "arXiv:2605.21384|2608.29460|2601.20103|2606.26300",
+   "what": "SpecBench; escalation channels; TRACE; Verification Horizon (reward-hacking benchmarks)",
+   "read": "title and abstract",
+   "criteria": {
+    "released": true,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": true
+   },
+   "reason": "reward hacking (including test-file edits) measured on benchmark or RL-training trajectories, not on PRs to real repositories"
+  },
+  {
+   "id": "github-tools",
+   "what": "tamperguard, overlock, assert-guard, tampercheck, testtrust, agent-test-verifier, rollout-sentinel, smixs/code-quality, proof-of-work, red-green-mode, ShadowBench",
+   "read": "README files (raw.githubusercontent.com)",
+   "criteria": {
+    "released": true,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": true
+   },
+   "reason": "detectors of test weakening in a diff, evaluated on hand-authored corpora (e.g. tamperguard: 28 tamper vs 28 honest edits); none releases a label on real agent PRs"
+  },
+  {
+   "id": "arXiv:2605.17675",
+   "what": "Bridging the Gap on AI-Assisted Scientific Software Development (INL TMAP8)",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": false,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": false
+   },
+   "reason": "experience report on agent-assisted V&V case development with tolerances as acceptance criteria; no label"
+  },
+  {
+   "id": "biorxiv:10.64898/2026.07.29.741496",
+   "what": "Scientific computing in the age of agentic AI: an exploratory field report",
+   "read": "full text (bioRxiv)",
+   "criteria": {
+    "released": false,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": false
+   },
+   "reason": "tolerances fixed before evaluation as acceptance criteria for agent rewrites; no PR-level label"
+  },
+  {
+   "id": "arXiv:2608.15188",
+   "what": "The Quality of Claude AI-authored Python Tests Is Not Weaker Than Human-authored Tests",
+   "read": "full text (arXiv HTML)",
+   "criteria": {
+    "released": true,
+    "agent_prs": false,
+    "pr_level": false,
+    "construct": false
+   },
+   "reason": "mutation-testing quality of AI-authored tests; no edit-of-existing-oracle label"
+  }
+ ],
+ "bulk_dispositions": {
+  "test_tamper_detection_tools": {
+   "n": 18,
+   "reason": "tools that flag deleted/skipped/weakened tests in a diff; evaluated on hand-authored or synthetic cases; no released label on real agent PRs (READMEs of the closest read in t4b_reads.json)",
+   "ids": [
+    "gh:Ahmadbey678/ShadowAgent-Guard",
+    "gh:LaterKidsXD/agent-test-verifier",
+    "gh:OyaAIProd/buer",
+    "gh:Rajveerx11/proof-of-work",
+    "gh:anhminhzui-dev/rollout-sentinel",
+    "gh:fernforge/tamperguard",
+    "gh:hidevinliu/red-green-mode",
+    "gh:momomuchu/make-no-mistakes",
+    "gh:smixs/code-quality",
+    "gh:wasaybuilds/proof-of-done",
+    "gh:xceleraterecruiting-dotcom/Sentinel",
+    "gh:yasakura/claude-tdd-kit",
+    "https://arxiv.org/abs/2604.13602",
+    "https://arxiv.org/abs/2606.25514",
+    "https://arxiv.org/abs/2607.05471",
+    "https://arxiv.org/abs/2607.18064",
+    "https://arxiv.org/abs/2607.21530",
+    "https://openreview.net/pdf?id=I3fKQbRUGy"
+   ]
+  },
+  "reward_hacking_rl_or_benchmark": {
+   "n": 70,
+   "reason": "reward hacking or test tampering studied in RL training, benchmarks or sandboxes; no label on PRs to real repositories",
+   "ids": [
+    "arXiv:2010.04646",
+    "arXiv:2203.07889",
+    "arXiv:2206.02039",
+    "arXiv:2307.01862",
+    "arXiv:2408.12622",
+    "arXiv:2410.06992",
+    "arXiv:2412.06176",
+    "arXiv:2506.00103",
+    "arXiv:2506.06786",
+    "arXiv:2507.04136",
+    "arXiv:2508.14313",
+    "arXiv:2508.17511",
+    "arXiv:2510.05024",
+    "arXiv:2510.11498",
+    "arXiv:2510.15859",
+    "arXiv:2511.06175",
+    "arXiv:2511.12294",
+    "arXiv:2601.12995",
+    "arXiv:2601.17223",
+    "arXiv:2602.03806",
+    "arXiv:2602.18297",
+    "arXiv:2603.02637",
+    "arXiv:2603.07300",
+    "arXiv:2603.08640",
+    "arXiv:2603.08806",
+    "arXiv:2604.01476",
+    "arXiv:2604.11950",
+    "arXiv:2604.14820",
+    "arXiv:2605.10133",
+    "arXiv:2605.12673",
+    "arXiv:2605.15815",
+    "arXiv:2605.16191",
+    "arXiv:2605.17958",
+    "arXiv:2605.22620",
+    "arXiv:2606.04455",
+    "arXiv:2606.07889",
+    "arXiv:2606.13763",
+    "arXiv:2607.00038",
+    "arXiv:2607.18064",
+    "arXiv:2607.20518",
+    "arXiv:2607.25333",
+    "arXiv:2607.28587",
+    "arXiv:2607.28928",
+    "arXiv:2608.17393",
+    "arXiv:2608.24135",
+    "arXiv:2609.00058",
+    "arXiv:2609.08149",
+    "arXiv:2609.12039",
+    "arXiv:2609.18996",
+    "doi:10.2139/ssrn.6501627",
+    "doi:10.52202/085713-2064",
+    "gh:FreakyAdy/EvalGuard",
+    "gh:cassieliang6709/agent-honesty-eval",
+    "hf:ankner/Llama3-8b-ultra-oracle",
+    "hf:matonski/reward-hacking-prompts",
+    "https://arxiv.org/abs/2510.12399",
+    "https://arxiv.org/abs/2510.22775",
+    "https://arxiv.org/abs/2606.07682",
+    "https://arxiv.org/abs/2608.03392",
+    "https://arxiv.org/abs/2608.22930",
+    "https://doi.org/10.1080/095281398146770",
+    "https://doi.org/10.1613/jair.1.11436",
+    "https://doi.org/10.48550/arxiv.2406.10162",
+    "https://doi.org/10.48550/arxiv.2410.06491",
+    "https://moogician.github.io/assets/pdf/towards-autonomous-swe.pdf",
+    "https://openreview.net/forum?id=TJeRjgjUwc",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7257600",
+    "https://rdi.berkeley.edu/assets/position-auto-sd.pdf",
+    "https://search.proquest.com/openview/36dae2e09ea2c71866a79f4c730f6314/1?pq-origsite=gscholar&cbl=18750&diss=y",
+    "https://search.proquest.com/openview/9f07f14d73ab4e5548613fa899a2e848/1?pq-origsite=gscholar&cbl=18750&diss=y"
+   ]
+  },
+  "tamper_evident_security_tooling": {
+   "n": 23,
+   "reason": "'tamper' in the security/audit sense (ledgers, payments, MCP proxies); unrelated to test oracles",
+   "ids": [
+    "gh:ANAMIZED/OMSP",
+    "gh:Aryan7098/Agent-Upi-Risk-Authorizer",
+    "gh:CJianYu/shipreceipt",
+    "gh:DSHCorrectover/ccs-conformance-vectors",
+    "gh:Navin-35/Agentcart-pro",
+    "gh:Pradhyut21/Build-pay",
+    "gh:Pranjal002-arch/razorpay-agent-commerce-passport",
+    "gh:RonaldSit/atelya",
+    "gh:ShettyShreyasR/Dynamics-of-Hallucination-Propagation",
+    "gh:Trustraai/agent-eval",
+    "gh:biru-codeastromer/maryada",
+    "gh:brokenchapt3r/NexusAgent",
+    "gh:crabsatellite/aegis-protocol",
+    "gh:gowrav32-create/nhi-sentinel",
+    "gh:jyotirmya17/razorpay-agent-spend-governor",
+    "gh:moizxsec/mcpwn",
+    "gh:provara-protocol/provara",
+    "gh:spk-22/Recoup",
+    "gh:supratik-sarkar/StART",
+    "gh:sxaad69/approveguard",
+    "gh:tech4biz-yasha/agmi",
+    "gh:thebharathkumar/loopcheck",
+    "https://doi.org/10.5281/zenodo.19382282"
+   ]
+  },
+  "test_generation_or_repair_method": {
+   "n": 18,
+   "reason": "methods that generate, repair or update tests; no released label of agent PRs editing existing expected values",
+   "ids": [
+    "arXiv:2407.03625",
+    "arXiv:2412.16620",
+    "arXiv:2504.20093",
+    "arXiv:2509.24419",
+    "arXiv:2511.12950",
+    "arXiv:2602.03181",
+    "arXiv:2605.06125",
+    "arXiv:2605.07122",
+    "arXiv:2605.13898",
+    "arXiv:2605.17437",
+    "arXiv:2605.25101",
+    "arXiv:2608.05822",
+    "doi:10.1145/3699598",
+    "doi:10.2139/ssrn.7515638",
+    "doi:10.5753/cibse.2026.42441",
+    "gh:shakalad92/agent-claim-verifier",
+    "https://doi.org/10.48550/arxiv.2408.00523",
+    "https://www.researchgate.net/profile/Ben-Green-17/publication/414085048_Evaluation_of_Automated_Testing_Frameworks_for_Large-Scale_Software_Applications/links/6a9fea2496ff526caa09d99b/Evaluation-of-Automated-Testing-Frameworks-for-Large-Scale-Software-Applications.pdf"
+   ]
+  },
+  "agent_benchmark_or_system": {
+   "n": 29,
+   "reason": "agent systems or benchmarks that mention tests or oracles; no PR-level oracle-edit label",
+   "ids": [
+    "arXiv:1705.07213",
+    "arXiv:2504.19338",
+    "arXiv:2505.13008",
+    "arXiv:2507.11544",
+    "arXiv:2603.25697",
+    "arXiv:2604.07789",
+    "arXiv:2606.11416",
+    "arXiv:2606.14168",
+    "arXiv:2606.20243",
+    "arXiv:2607.01213",
+    "arXiv:2607.18275",
+    "arXiv:2608.09748",
+    "arXiv:2608.22068",
+    "arXiv:2608.23842",
+    "arXiv:2609.07595",
+    "doi:10.1109/icetm68138.2026.11648141",
+    "doi:10.2139/ssrn.7068138",
+    "doi:10.2139/ssrn.7129500",
+    "gh:bram-wq/agent-guardrails",
+    "https://arxiv.org/abs/2603.15976",
+    "https://arxiv.org/abs/2604.05100",
+    "https://arxiv.org/abs/2608.20195",
+    "https://doi.org/10.1016/j.patter.2024.100988",
+    "https://doi.org/10.3390/buildings15203662",
+    "https://doi.org/10.36227/techrxiv.174495492.22752319/v1",
+    "https://doi.org/10.48550/arxiv.2608.26753",
+    "https://doi.org/10.63125/p1q8yf46",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7359418",
+    "https://www.svedbergopen.com/index.php/ijaiml/article/view/1927"
+   ]
+  },
+  "other_unrelated": {
+   "n": 32,
+   "reason": "keyword collision or adjacent topic (agent-based models, blockchain oracles, scientific reproduction by agents, test mocking, deletion avoidance, surveys); no released PR-level label of edits to existing test expected values",
+   "ids": [
+    "arXiv:1705.08586",
+    "arXiv:2212.05357",
+    "arXiv:2412.12409",
+    "arXiv:2602.00409",
+    "arXiv:2603.30033",
+    "arXiv:2606.00970",
+    "arXiv:2609.18357",
+    "doi:10.1109/icst62969.2025.10988926",
+    "gh:123Krishna456Reddy/wazuh-file-integrity-monitoring-lab",
+    "gh:HlaingPhyoAung/sqlmap",
+    "gh:K20tg/agent-ifc",
+    "gh:Shubhmane9503/sigma-ai-abuse-detections",
+    "hf:ALIN-LLM/analysis-oracle-verifier",
+    "hf:open-llm-leaderboard/qingy2019__Oracle-14B-details",
+    "https://arxiv.org/abs/2605.00803",
+    "https://arxiv.org/abs/2606.09774",
+    "https://arxiv.org/abs/2607.07946",
+    "https://arxiv.org/abs/2607.26819",
+    "https://arxiv.org/abs/2607.28887",
+    "https://arxiv.org/abs/2609.07849",
+    "https://arxiv.org/abs/2609.19134",
+    "https://doi.org/10.1039/d4dd00074a",
+    "https://doi.org/10.1109/4434.708256",
+    "https://doi.org/10.1109/access.2022.3184726",
+    "https://doi.org/10.48550/arxiv.2406.07944",
+    "https://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=9243679&fileOId=9243681",
+    "https://molarium.org/paper/submissions/chemrxiv-v1-2026-09-08/Molarium.pdf",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7185258",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7194698",
+    "https://pubs.rsc.org/dd/article-abstract/5/6/2448/1233891",
+    "https://www.researchgate.net/profile/Ben-Green-17/publication/411244045_Artificial_Intelligence-Driven_Methodologies_for_Enhancing_Experimental_Reproducibility_in_Fundamental_and_Applied_Scientific_Research/links/6a726cbfef3d2909799a0a73/Artificial-Intelligence-Driven-Methodologies-for-Enhancing-Experimental-Reproducibility-in-Fundamental-and-Applied-Scientific-Research.pdf",
+    "https://www.thesesjournal.com/index.php/1/article/view/2728"
+   ]
+  },
+  "duplicate_of_close_entry": {
+   "n": 24,
+   "reason": "the same work as an adjudicated close entry (read in full there)",
+   "ids": [
+    "arXiv:2510.20270",
+    "arXiv:2511.21654",
+    "arXiv:2601.20103",
+    "arXiv:2601.21194",
+    "arXiv:2605.01471",
+    "arXiv:2605.21384",
+    "arXiv:2606.18168",
+    "arXiv:2606.26300",
+    "arXiv:2607.18057",
+    "arXiv:2608.29460",
+    "https://arxiv.org/abs/2601.20103",
+    "https://arxiv.org/abs/2605.01471",
+    "https://arxiv.org/abs/2605.17675",
+    "https://arxiv.org/abs/2606.26300",
+    "https://arxiv.org/abs/2607.18057",
+    "https://arxiv.org/abs/2608.15188",
+    "https://dl.acm.org/doi/abs/10.1145/3793302.3793618",
+    "https://doi.org/10.1145/3793302.3793618",
+    "https://doi.org/10.48550/arxiv.2601.21194",
+    "https://doi.org/10.48550/arxiv.2607.18057",
+    "https://ieeexplore.ieee.org/abstract/document/11645512/",
+    "https://ieeexplore.ieee.org/abstract/document/11662488/",
+    "https://openalex.org/W7126281655",
+    "https://www.biorxiv.org/content/10.64898/2026.07.29.741496.abstract"
+   ]
+  }
+ },
+ "channels_incomplete": {
+  "github": "the authorised token ('2. Trae metavine') returns 401 Bad credentials; repository search ran unauthenticated; query 'oracle signals agent test' got HTTP 403 (IP-level unauthenticated rate limit) twice (t4, t4d)",
+  "openalex": "topical positive control failed on ranking: 2606.18168 is indexed (W7165002592, exact-title probe in t4d_rerun.json) but not in the top 50 of the keyword search; OpenAlex keyword recall is weak for this topic",
+  "acm": "doi 10.1145/3793302.3793618 full text HTTP 403; adjudicated from abstract",
+  "semantic_scholar_dblp": "not queried in this run (previous build: 3 x 429 and 7 x bot-wall)",
+  "effect_on_verdict": "a KILL rests on one entry read from its released file; incompleteness only weakens a CLEAR"
+ }
+}

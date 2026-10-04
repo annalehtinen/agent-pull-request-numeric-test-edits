@@ -1,0 +1,82 @@
+{
+ "agent_prs_flagged": 151,
+ "top_repositories": [
+  {
+   "repo": "MetaMask/metamask-mobile",
+   "flagged_agent_prs": 10
+  },
+  {
+   "repo": "elizaOS/eliza",
+   "flagged_agent_prs": 9
+  },
+  {
+   "repo": "getsentry/sentry",
+   "flagged_agent_prs": 8
+  },
+  {
+   "repo": "PrefectHQ/prefect",
+   "flagged_agent_prs": 7
+  },
+  {
+   "repo": "TanStack/db",
+   "flagged_agent_prs": 7
+  },
+  {
+   "repo": "tphakala/birdnet-go",
+   "flagged_agent_prs": 6
+  },
+  {
+   "repo": "getsentry/sentry-cocoa",
+   "flagged_agent_prs": 6
+  },
+  {
+   "repo": "activepieces/activepieces",
+   "flagged_agent_prs": 5
+  },
+  {
+   "repo": "promptfoo/promptfoo",
+   "flagged_agent_prs": 5
+  },
+  {
+   "repo": "PostHog/posthog",
+   "flagged_agent_prs": 5
+  },
+  {
+   "repo": "dotnet/runtime",
+   "flagged_agent_prs": 4
+  },
+  {
+   "repo": "hmislk/hmis",
+   "flagged_agent_prs": 4
+  },
+  {
+   "repo": "DaveSkender/Stock.Indicators",
+   "flagged_agent_prs": 4
+  },
+  {
+   "repo": "Shelf-nu/shelf.nu",
+   "flagged_agent_prs": 3
+  },
+  {
+   "repo": "airbytehq/airbyte",
+   "flagged_agent_prs": 3
+  }
+ ],
+ "declared_rule_count": 1,
+ "wide_rule_repositories_added": [
+  "514-labs/moose",
+  "Cap-go/capgo",
+  "DaveSkender/Stock.Indicators",
+  "calcom/cal.com",
+  "distribworks/dkron",
+  "dotnet/aspire",
+  "evmts/tevm-monorepo",
+  "github/issue-metrics",
+  "iterative/datachain",
+  "laude-institute/terminal-bench",
+  "sam-goodwin/alchemy"
+ ],
+ "wide_rule_count": 9,
+ "threshold": 30,
+ "untestable_under_wide_rule": true
+}
