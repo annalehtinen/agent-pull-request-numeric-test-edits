@@ -1,0 +1,90 @@
+{
+ "schema": "github_mirror_manifest",
+ "version": 2,
+ "repository": "annalehtinen/agent-pull-request-numeric-test-edits",
+ "release_version": "1.0.0",
+ "title": "Data for: Coding agents and numeric test tolerances in scientific software: Limits of a public pull-request dataset",
+ "dataset_doi": "10.5281/zenodo.23144458",
+ "paper_preprint_doi": null,
+ "licence_id": "cc-by-4.0",
+ "committed_files": [
+  {
+   "path": "F12B_SALVAGE.md",
+   "bytes": 4760,
+   "sha256": "f4e4236ec85de914d0961c81190a947927a6b7925e67c0edfc16e9fefeab7ffc"
+  },
+  {
+   "path": "t4_f12b_killcheck.json",
+   "bytes": 38380,
+   "sha256": "f833e61071d79c5bc2b609b227c117f442d6fbd8bc9ce365ec88eb31028f0a22"
+  },
+  {
+   "path": "t4c_adapted_labels.json",
+   "bytes": 12202,
+   "sha256": "1a1cb2ca24d3d802b1f8daa40e470832ce5c920dd589d27dfa7019e6c29ee7a0"
+  },
+  {
+   "path": "t4c_adjudication.json",
+   "bytes": 18752,
+   "sha256": "375e85a524a7a74a081e7cc0f4b75eb93d8d56c00f06f0e642b0a9cd5e5bf81f"
+  },
+  {
+   "path": "t5_f12b_feasibility.json",
+   "bytes": 7577,
+   "sha256": "3b39644664379cb856512e1f6402f62bb0447267677fb0f881725c149658f8c4"
+  },
+  {
+   "path": "t5a_detect.json",
+   "bytes": 3232,
+   "sha256": "0ebf56fb56deaa10f93a5b2b1db7d36bc8315666f1a63e616e885046b6cade6d"
+  },
+  {
+   "path": "t5d_sensitivity.json",
+   "bytes": 1489,
+   "sha256": "4e204f57e5474a45aee7d3097b396bff4e070f65905b48d2c7fc9c3e700b3a96"
+  },
+  {
+   "path": "t5e_sci_census_labels.json",
+   "bytes": 6070,
+   "sha256": "af3569942547476478a01e407912775fb929a739ebc2d85c2e40c77d4d4b7dbe"
+  },
+  {
+   "path": "t6_f12b_decision.json",
+   "bytes": 1394,
+   "sha256": "b31f09091dcc1e87729e3be4310e761ea85a6985ae90f9305d2446df18a09beb"
+  },
+  {
+   "path": "t7_privacy_audit.json",
+   "bytes": 368,
+   "sha256": "106ee491a18760e404c669b4b242cdb1d36ab7fb959102d795e44ea825184af1"
+  },
+  {
+   "path": "t8_base_rates_overcount.json",
+   "bytes": 2568,
+   "sha256": "88423a6c4090f796afa2989040d1941d16be428190ab8039fce1de05647881ee"
+  }
+ ],
+ "release_assets": [],
+ "left_out": [
+  {
+   "path": "make_t8_base_rates.py",
+   "bytes": 6937,
+   "reason": "code or build log; in the Zenodo record only"
+  },
+  {
+   "path": "oracle_edit_detector.py",
+   "bytes": 12852,
+   "reason": "code or build log; in the Zenodo record only"
+  },
+  {
+   "path": "probe_detector_direction.py",
+   "bytes": 2853,
+   "reason": "code or build log; in the Zenodo record only"
+  },
+  {
+   "path": "t9_detector_direction_probe.log",
+   "bytes": 1510,
+   "reason": "code or build log; in the Zenodo record only"
+  }
+ ]
+}

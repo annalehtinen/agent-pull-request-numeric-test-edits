@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these data, please cite them as below."
+type: dataset
+title: "Data for: Coding agents and numeric test tolerances in scientific software: Limits of a public pull-request dataset"
+authors:
+  - family-names: "Lehtinen"
+    given-names: "Anna"
+    affiliation: "Independent Researcher, Finland"
+doi: "10.5281/zenodo.23144458"
+license: "CC-BY-4.0"
+url: "https://github.com/annalehtinen/agent-pull-request-numeric-test-edits"
+keywords:
+  - "AI coding agents"
+  - "pull requests"
+  - "test oracles"
+  - "scientific software"
+  - "energy system models"
+  - "mining software repositories"
+  - "negative result"
+  - "label validity"

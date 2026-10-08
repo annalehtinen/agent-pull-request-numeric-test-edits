@@ -1,0 +1,407 @@
+{
+ "rater": "builder (AI model), single rater",
+ "sample_seed": 20260930,
+ "rule": "edits_existing_expected_or_tolerance: the PR's test patch changes an expected value or tolerance of an existing test (any type); numeric_expected_or_tolerance_edit: that edit is a numeric literal or tolerance",
+ "labels": [
+  {
+   "i": 0,
+   "group": "adapted_true",
+   "repo_name": "promptfoo/promptfoo",
+   "number": 3942,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": true,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "existing expected prompts structure replaced by a looser structure check"
+  },
+  {
+   "i": 1,
+   "group": "adapted_true",
+   "repo_name": "getsentry/sentry",
+   "number": 82295,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": true,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "expected error_message string changed"
+  },
+  {
+   "i": 2,
+   "group": "adapted_true",
+   "repo_name": "ydb-platform/ydb",
+   "number": 34745,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "retry wrapper around unchanged expectations"
+  },
+  {
+   "i": 3,
+   "group": "adapted_true",
+   "repo_name": "jdx/mise",
+   "number": 3562,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": true,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "expected CLI output text changed"
+  },
+  {
+   "i": 4,
+   "group": "adapted_true",
+   "repo_name": "elizaOS/eliza",
+   "number": 5201,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "CI skip removed"
+  },
+  {
+   "i": 5,
+   "group": "adapted_true",
+   "repo_name": "getsentry/sentry-javascript",
+   "number": 16386,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "test deleted and new tests added; mocks changed"
+  },
+  {
+   "i": 6,
+   "group": "adapted_true",
+   "repo_name": "thirdweb-dev/js",
+   "number": 6004,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "test-runner retry setting"
+  },
+  {
+   "i": 7,
+   "group": "adapted_true",
+   "repo_name": "nrwl/nx",
+   "number": 31830,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "import-path change in 223 files"
+  },
+  {
+   "i": 8,
+   "group": "adapted_true",
+   "repo_name": "anthropics/claude-code-action",
+   "number": 499,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "mock context copy"
+  },
+  {
+   "i": 9,
+   "group": "adapted_true",
+   "repo_name": "elizaOS/eliza",
+   "number": 5845,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": true,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "expected call arguments (toHaveBeenCalledWith) changed"
+  },
+  {
+   "i": 10,
+   "group": "adapted_true",
+   "repo_name": "getsentry/sentry",
+   "number": 101539,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "mock and new assertion added"
+  },
+  {
+   "i": 11,
+   "group": "adapted_true",
+   "repo_name": "browser-use/browser-use",
+   "number": 3418,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "judge model swapped in a CI evaluation script"
+  },
+  {
+   "i": 12,
+   "group": "adapted_true",
+   "repo_name": "odigos-io/odigos",
+   "number": 3926,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "assert steps removed from e2e YAML (no value edited)"
+  },
+  {
+   "i": 13,
+   "group": "adapted_true",
+   "repo_name": "elie222/inbox-zero",
+   "number": 839,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "skip condition changed"
+  },
+  {
+   "i": 14,
+   "group": "adapted_true",
+   "repo_name": "latitude-dev/latitude-llm",
+   "number": 1021,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "fixture setup changed"
+  },
+  {
+   "i": 15,
+   "group": "adapted_true",
+   "repo_name": "elizaOS/eliza",
+   "number": 5596,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "type annotations refactored"
+  },
+  {
+   "i": 16,
+   "group": "adapted_true",
+   "repo_name": "PrefectHQ/prefect",
+   "number": 20642,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "existence check replaced by a throw"
+  },
+  {
+   "i": 17,
+   "group": "adapted_true",
+   "repo_name": "getsentry/sentry",
+   "number": 91271,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "call signature on the actual side; new pagination tests"
+  },
+  {
+   "i": 18,
+   "group": "adapted_true",
+   "repo_name": "nrwl/nx",
+   "number": 29399,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": true,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "expected dry-run output text changed (fixed URL -> registry variable)"
+  },
+  {
+   "i": 19,
+   "group": "adapted_true",
+   "repo_name": "getsentry/sentry",
+   "number": 87982,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "input profile data extended"
+  },
+  {
+   "i": 20,
+   "group": "adapted_false_has_mod",
+   "repo_name": "PrefectHQ/prefect",
+   "number": 19698,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 21,
+   "group": "adapted_false_has_mod",
+   "repo_name": "supabase/supabase",
+   "number": 35201,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 22,
+   "group": "adapted_false_has_mod",
+   "repo_name": "promptfoo/promptfoo",
+   "number": 6251,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 23,
+   "group": "adapted_false_has_mod",
+   "repo_name": "BlueWallet/BlueWallet",
+   "number": 7901,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 24,
+   "group": "adapted_false_has_mod",
+   "repo_name": "getsentry/sentry",
+   "number": 106268,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 25,
+   "group": "adapted_false_has_mod",
+   "repo_name": "elie222/inbox-zero",
+   "number": 1737,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 26,
+   "group": "adapted_false_has_mod",
+   "repo_name": "RooCodeInc/Roo-Code",
+   "number": 11140,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 27,
+   "group": "adapted_false_has_mod",
+   "repo_name": "oven-sh/bun",
+   "number": 22366,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 28,
+   "group": "adapted_false_has_mod",
+   "repo_name": "getsentry/sentry-python",
+   "number": 5282,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 29,
+   "group": "adapted_false_has_mod",
+   "repo_name": "microsoft/powerplatform-vscode",
+   "number": 1275,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 30,
+   "group": "adapted_false_has_mod",
+   "repo_name": "jdx/mise",
+   "number": 8053,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 31,
+   "group": "adapted_false_has_mod",
+   "repo_name": "Azure/azure-sdk-for-net",
+   "number": 55015,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 32,
+   "group": "adapted_false_has_mod",
+   "repo_name": "dotnet/runtime",
+   "number": 122835,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 33,
+   "group": "adapted_false_has_mod",
+   "repo_name": "promptfoo/promptfoo",
+   "number": 2476,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 34,
+   "group": "adapted_false_has_mod",
+   "repo_name": "RooCodeInc/Roo-Code",
+   "number": 985,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 35,
+   "group": "adapted_false_has_mod",
+   "repo_name": "crewAIInc/crewAI",
+   "number": 3175,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 36,
+   "group": "adapted_false_has_mod",
+   "repo_name": "MetaMask/metamask-mobile",
+   "number": 14602,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 37,
+   "group": "adapted_false_has_mod",
+   "repo_name": "promptfoo/promptfoo",
+   "number": 7100,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 38,
+   "group": "adapted_false_has_mod",
+   "repo_name": "dotnet/aspire",
+   "number": 13992,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  },
+  {
+   "i": 39,
+   "group": "adapted_false_has_mod",
+   "repo_name": "PrefectHQ/prefect",
+   "number": 20683,
+   "detector_flag": false,
+   "edits_existing_expected_or_tolerance": false,
+   "numeric_expected_or_tolerance_edit": false,
+   "note": "new tests or new files only; no existing expectation edited"
+  }
+ ]
+}

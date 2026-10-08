@@ -1,0 +1,294 @@
+{
+ "rater": "builder (AI model), single rater",
+ "agent_prs": 47,
+ "numeric_oracle_edit_prs": 1,
+ "adjacent_oracle_change_prs": [
+  "SciML/DiffEqGPU.jl#367",
+  "acts-project/acts#4185",
+  "acts-project/acts#4591"
+ ],
+ "labels": [
+  {
+   "pr": "JuliaLang/julia#57338",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#57576",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#59725",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#59782",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#60697",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#60848",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaLang/julia#60929",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1536",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1596",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1597",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1598",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1599",
+   "mixed_hunks": 3,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "JuliaSymbolics/Symbolics.jl#1606",
+   "mixed_hunks": 3,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#348",
+   "mixed_hunks": 6,
+   "numeric_oracle_edit": true,
+   "note": "tolerances relaxed: @test norm(bench_sol.u - sol[1].u) < 7e-4 -> < 2e-3 (two tests), norm(bench_asol.u - asol[1].u) < 4e-3 -> < 5e-3"
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#350",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#355",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#356",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#363",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#365",
+   "mixed_hunks": 49,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#367",
+   "mixed_hunks": 17,
+   "numeric_oracle_edit": false,
+   "note": "compared quantity narrowed from the full trajectory to the end point (bench_sol.u -> bench_sol.u[end]) with tolerances kept"
+  },
+  {
+   "pr": "SciML/DiffEqGPU.jl#371",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#3953",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4001",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4063",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4088",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4149",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4185",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": "stored reference-output hashes of simulation ROOT files replaced (regression hashes; not a numeric literal)"
+  },
+  {
+   "pr": "acts-project/acts#4270",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4396",
+   "mixed_hunks": 4,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4425",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4574",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4591",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": "stored reference-output hashes of CKF track ROOT files replaced (regression hashes; not a numeric literal)"
+  },
+  {
+   "pr": "acts-project/acts#4596",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4728",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4737",
+   "mixed_hunks": 1,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4916",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4966",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#4980",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#5040",
+   "mixed_hunks": 8,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#5080",
+   "mixed_hunks": 4,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#5107",
+   "mixed_hunks": 13,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "acts-project/acts#5163",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "tier4/scenario_simulator_v2#1477",
+   "mixed_hunks": 2,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "tier4/scenario_simulator_v2#1498",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "tier4/scenario_simulator_v2#1510",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "tier4/scenario_simulator_v2#1704",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  },
+  {
+   "pr": "tier4/scenario_simulator_v2#1734",
+   "mixed_hunks": 0,
+   "numeric_oracle_edit": false,
+   "note": ""
+  }
+ ]
+}

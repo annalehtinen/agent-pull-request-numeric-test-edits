@@ -1,0 +1,36 @@
+{
+ "run_at": "2026-09-28T10:34:09Z",
+ "object": "DPO-F12b (re-scoped DPO-F12: agent PR edits an existing numeric expected value or tolerance in a test, scientific and energy-modelling software)",
+ "decision": "UNTESTABLE",
+ "conditions": {
+  "kill_prior_label_exists": false,
+  "kill_triggering_entries": [],
+  "untestable_public_table": true,
+  "sci_energy_flagged_agent_prs": 1,
+  "threshold": 30
+ },
+ "reasons": [
+  "adapted-label hand-check: 5 of 20 label-positive agent PRs edit an existing expected value or tolerance (Wilson95 [0.112, 0.469])",
+  "UNTESTABLE: 1 flagged agent PRs in 5 scientific/energy repositories of the public table (threshold 30); 0 of the 17 named energy repositories are in the table; census of all 47 agent PRs in the subset: 1 numeric oracle edit(s); wider repository rule: 9 flagged"
+ ],
+ "evidence_files": [
+  "t4_f12b_killcheck.json",
+  "t4_f12b_killcheck_raw.json",
+  "t4c_adjudication.json",
+  "t4c_adapted_sample.json",
+  "t4c_adapted_labels.json",
+  "t4b_reads.json",
+  "t4d_rerun.json",
+  "t5_f12b_feasibility.json",
+  "t5a_detect.json",
+  "t5a_repo_meta.json",
+  "t5b_handcheck_sample.json",
+  "t5b_handlabels.json",
+  "t5a_ingest.json",
+  "t5d_sensitivity.json",
+  "t5e_sci_census.json",
+  "t5e_sci_census_labels.json",
+  "t7_privacy_audit.json"
+ ],
+ "next": "no manuscript (step 4 not run); salvage note F12B_SALVAGE.md for the open-publish channel"
+}

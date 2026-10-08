@@ -1,0 +1,277 @@
+{
+ "run_at": "2026-09-28T10:34:08Z",
+ "source": {
+  "dataset": "huggingface.co/datasets/mabujadallah/GitHub-Agentic-PR-Dataset (CC-BY-4.0)",
+  "files": [
+   "pr_test_patches.parquet",
+   "pr_test_quality.parquet",
+   "fix_classified_prs.parquet (projected, no person columns)"
+  ],
+  "ingest_log": "t5a_ingest.json",
+  "detector": "oracle_edit_detector.py (selftest log oracle_edit_detector_selftest.log)"
+ },
+ "table_scope": {
+  "patch_rows": 222208,
+  "prs": 49042,
+  "repositories": 173,
+  "agent_prs": 7391,
+  "note": "the public test-patch table covers bug-fix PRs (type = fix) in repositories with both agent and human fix PRs only"
+ },
+ "counts": {
+  "hunks_with_changes": 456054,
+  "hunks_flagged": 2626,
+  "hunks_numedit": 2626,
+  "hunks_toladd": 0,
+  "prs_flagged": 1218,
+  "agent_prs_flagged": 151,
+  "agent_prs_flagged_merged": 120,
+  "human_prs_flagged": 1067,
+  "agent_prs_by_agent_flagged": {
+   "Agent C": 14,
+   "Agent D": 9,
+   "Agent A": 74,
+   "Agent B": 54
+  }
+ },
+ "scientific_energy_subset": {
+  "rule": "17 named energy repositories, or a GitHub topic in the declared list, or a declared keyword in the repository name or description (t5a_repo_meta.json)",
+  "repositories_in_table": [
+   "JuliaLang/julia",
+   "JuliaSymbolics/Symbolics.jl",
+   "SciML/DiffEqGPU.jl",
+   "acts-project/acts",
+   "tier4/scenario_simulator_v2"
+  ],
+  "prs_in_table": 439,
+  "agent_prs_in_table": 47,
+  "agent_prs_by_repo": {
+   "SciML/DiffEqGPU.jl": 8,
+   "tier4/scenario_simulator_v2": 5,
+   "acts-project/acts": 21,
+   "JuliaSymbolics/Symbolics.jl": 6,
+   "JuliaLang/julia": 7
+  },
+  "agent_prs_flagged": 1,
+  "agent_prs_flagged_merged": 1,
+  "agent_prs_flagged_by_repo": {
+   "SciML/DiffEqGPU.jl": 1
+  },
+  "human_prs_flagged": 16,
+  "expected_true_oracle_edit_agent_prs": 0.9,
+  "census_all_agent_prs_read": {
+   "agent_prs": 47,
+   "numeric_oracle_edit_prs": 1,
+   "adjacent_oracle_change_prs": [
+    "SciML/DiffEqGPU.jl#367",
+    "acts-project/acts#4185",
+    "acts-project/acts#4591"
+   ],
+   "file": "t5e_sci_census_labels.json (every mixed hunk of the 47 PRs read; t5e_sci_census.json)"
+  },
+  "sensitivity_wide_rule": {
+   "flagged_agent_prs": 9,
+   "repositories_added": [
+    "514-labs/moose",
+    "Cap-go/capgo",
+    "DaveSkender/Stock.Indicators",
+    "calcom/cal.com",
+    "distribworks/dkron",
+    "dotnet/aspire",
+    "evmts/tevm-monorepo",
+    "github/issue-metrics",
+    "iterative/datachain",
+    "laude-institute/terminal-bench",
+    "sam-goodwin/alchemy"
+   ],
+   "file": "t5d_sensitivity.json"
+  },
+  "energy17_in_table": [],
+  "energy17_prs_in_table": 0
+ },
+ "detector_precision": {
+  "n_sampled": 48,
+  "true_positive": 42,
+  "pooled": 0.875,
+  "wilson95": [
+   0.753,
+   0.9414
+  ],
+  "stratum_weighted": 0.875,
+  "by_stratum": {
+   "F|agent=False|js_ts": {
+    "n": 6,
+    "tp": 6,
+    "stratum_size": 926
+   },
+   "F|agent=False|jvm_net": {
+    "n": 6,
+    "tp": 3,
+    "stratum_size": 413
+   },
+   "F|agent=False|other": {
+    "n": 6,
+    "tp": 6,
+    "stratum_size": 324
+   },
+   "F|agent=False|python": {
+    "n": 6,
+    "tp": 5,
+    "stratum_size": 621
+   },
+   "F|agent=True|js_ts": {
+    "n": 6,
+    "tp": 6,
+    "stratum_size": 145
+   },
+   "F|agent=True|jvm_net": {
+    "n": 6,
+    "tp": 6,
+    "stratum_size": 43
+   },
+   "F|agent=True|other": {
+    "n": 6,
+    "tp": 4,
+    "stratum_size": 21
+   },
+   "F|agent=True|python": {
+    "n": 6,
+    "tp": 6,
+    "stratum_size": 44
+   }
+  },
+  "sci_repo_flagged_hunks": {
+   "n": 53,
+   "tp": 50
+  }
+ },
+ "detector_recall_stratified": {
+  "estimated_true_positive_hunks": 2220.0,
+  "estimated_false_negative_hunks": 5015.2,
+  "point": 0.3068,
+  "conservative95": [
+   0.0274,
+   0.6306
+  ],
+  "strata": {
+   "U1_oraclemod_not_flagged": {
+    "stratum_size": 50152,
+    "n_sampled": 20,
+    "false_negatives": 2,
+    "fn_rate_wilson95": [
+     0.0279,
+     0.301
+    ]
+   },
+   "U2_numchg_nonoracle": {
+    "stratum_size": 6849,
+    "n_sampled": 12,
+    "false_negatives": 0,
+    "fn_rate_wilson95": [
+     0.0,
+     0.2425
+    ]
+   },
+   "U3_other_unflagged_mixed": {
+    "stratum_size": 210737,
+    "n_sampled": 12,
+    "false_negatives": 0,
+    "fn_rate_wilson95": [
+     0.0,
+     0.2425
+    ]
+   }
+  },
+  "structural_zero": "hunks with only added or only removed lines cannot change an existing literal; 185640 such unflagged hunks are excluded from the base"
+ },
+ "detector_recall_independent_positives": {
+  "n_positives": 0,
+  "flagged": 0,
+  "recall": null,
+  "wilson95": [
+   0.0,
+   1.0
+  ],
+  "positives": [],
+  "note": "undefined when the detector-independent sample holds no numeric edit"
+ },
+ "false_positive_items": [
+  {
+   "sid": 19,
+   "stratum": "F|agent=True|other",
+   "note": "bats @test block: server port in a shell command (setup), not an expected value"
+  },
+  {
+   "sid": 22,
+   "stratum": "F|agent=True|other",
+   "note": "rapid.Check property test: input-range constant (maxAllocation), not an expected value"
+  },
+  {
+   "sid": 24,
+   "stratum": "F|agent=False|python",
+   "note": "test rewritten to a different request (POST -> GET search); old status assertion replaced, not the same check"
+  },
+  {
+   "sid": 36,
+   "stratum": "F|agent=False|jvm_net",
+   "note": "index on the actual side (must().get(0) -> get(1))"
+  },
+  {
+   "sid": 39,
+   "stratum": "F|agent=False|jvm_net",
+   "note": "input argument inside an assertThrows lambda (retention days 0 -> 7)"
+  },
+  {
+   "sid": 41,
+   "stratum": "F|agent=False|jvm_net",
+   "note": "batch-size limit inside the object under test (setup lambda); matched through a 'should...' method name"
+  },
+  {
+   "sid": 104,
+   "stratum": "F_sci_all",
+   "note": "index on the actual side (build_function(...)[2] -> [1])"
+  },
+  {
+   "sid": 125,
+   "stratum": "F_sci_all",
+   "note": "platform condition (sizeof(Int) == 8 -> 4) selecting the expected string, not an expected value"
+  },
+  {
+   "sid": 136,
+   "stratum": "F_sci_all",
+   "note": "swapped inputs inside @test_throws"
+  }
+ ],
+ "false_negative_items": [
+  {
+   "sid": 54,
+   "stratum": "U1_oraclemod_not_flagged",
+   "note": "FN: expected funnel dict 'count': 0 -> 1 more than 12 lines below the assertion opener (continuation window)"
+  },
+  {
+   "sid": 67,
+   "stratum": "U1_oraclemod_not_flagged",
+   "note": "FN: numeric tolerance removed (BeApproximately(x, precision: HighPrecision) -> Be(x)); symbolic tolerance, not a literal"
+  }
+ ],
+ "reference_output_numeric_edits_in_unflagged_sample": 5,
+ "development_round": {
+  "detector_v1_sample": "t5b_devsample_v1.json",
+  "labels": "t5b_devlabels_v1.json",
+  "defects_fixed_in_v2": [
+   "keyword 'should' matched inside test-name strings and comments",
+   "numbers in comments compared",
+   "identical lines mis-paired after reformatting or reordering",
+   "expected-bound variables (maxExpected...) and '=' continuation missed"
+  ],
+  "note": "v1 labels were used only to find defect classes; reported estimates come from the fresh v2 sample, which excludes every v1 hunk"
+ },
+ "threshold_flagged_sci_agent_prs": 30,
+ "feasibility": "UNTESTABLE_ON_PUBLIC_TABLE",
+ "stage2_note": "the public table cannot power a Stage-1 registered report on scientific/energy repositories; a Stage 2 would have to mine fresh agent PRs from scientific and energy-modelling repositories (GitHub API or a later AIDev release), which needs a working GitHub token and the author's recorded legal basis",
+ "hand_check": {
+  "annotator": "the builder (an AI model), single rater, rule stated in this file's docstring",
+  "labels_file": "t5b_handlabels.json",
+  "sample_file": "t5b_handcheck_sample.json",
+  "seed": 20260929
+ }
+}
